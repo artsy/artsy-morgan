@@ -1,5 +1,5 @@
-import chalk from 'chalk';
-import logger from 'morgan';
+var chalk = require('chalk');
+var logger = require('morgan');
 
 var logFormat = function(tokens, req, res) {
   var status, url, urlStatus;
