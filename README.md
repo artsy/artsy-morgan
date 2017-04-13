@@ -2,6 +2,8 @@
 
 Colorful logging for Artsy Express apps.
 
+Point People: @izakp, @kanaabe
+
 Use:
 
 ```
