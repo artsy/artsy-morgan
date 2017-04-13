@@ -1,4 +1,4 @@
-var logFormat = require('../').logFormat
+var logFormat = require('../logFormat.js')
 
 describe('logger format', function() {
 
