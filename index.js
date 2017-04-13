@@ -1,7 +1,8 @@
 var chalk = require('chalk');
 var morgan = require('morgan');
+var logFormat;
 
-var logFormat = function(tokens, req, res) {
+module.exports.logFormat = logFormat = function(tokens, req, res) {
   var status, url, urlStatus;
   url = tokens.url(req, res);
   status = tokens.status(req, res);
@@ -25,4 +26,4 @@ var logFormat = function(tokens, req, res) {
           ' "' + chalk.white(tokens['user-agent'](req, res)) + '"';
 };
 
-module.exports = process.env.NODE_ENV === 'development' ? morgan('dev') : morgan(logFormat);
+module.exports.logger = process.env.NODE_ENV === 'development' ? morgan('dev') : morgan(logFormat);
